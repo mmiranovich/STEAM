@@ -8,10 +8,10 @@ export function CheckButton({ disabled, onClick }: CheckButtonProps) {
     <button
       disabled={disabled}
       onClick={onClick}
-      className={`w-full h-[52px] rounded-full text-[17px] font-semibold transition-colors duration-200 ${
+      className={`w-full h-[56px] rounded-full text-[18px] font-semibold transition-colors duration-200 ${
         disabled
-          ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-          : 'bg-[#00A651] text-white hover:bg-[#009347] active:scale-[0.98] cursor-pointer'
+          ? 'bg-[#EEF0F3] text-[#9AA0A6] cursor-not-allowed'
+          : 'bg-[#00A651] text-white hover:bg-[#009347] active:scale-[0.99] cursor-pointer'
       }`}
     >
       Check
