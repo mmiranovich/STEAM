@@ -102,7 +102,7 @@ function App() {
         />
       </div>
 
-      <div className="mt-auto pt-5">
+      <div className="mt-auto pb-8">
         {isInteractive && (
           <CheckButton
             disabled={selectedAnswer === null}
