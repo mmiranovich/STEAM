@@ -20,8 +20,9 @@ export function ScaleVisual({
           </filter>
         </defs>
 
-        {/* Scale body */}
-        <rect x="60" y="140" width="200" height="80" rx="16" fill="#374151" filter="url(#shadow)" />
+        {/* Scale body – 3D bottom edge */}
+        <rect x="60" y="146" width="200" height="80" rx="16" fill="#242a38" />
+        <rect x="60" y="140" width="200" height="80" rx="16" fill="#343a4b" />
 
         {/* Body highlight */}
         <rect x="60" y="140" width="200" height="6" rx="3" fill="#4B5563" opacity="0.5" />
@@ -36,7 +37,7 @@ export function ScaleVisual({
           fill="#1F2937"
           fontSize="28"
           fontWeight="bold"
-          fontFamily="'DM Sans', system-ui, sans-serif"
+          fontFamily="'Inter', system-ui, sans-serif"
         >
           {totalWeight}
         </text>
@@ -65,7 +66,7 @@ export function ScaleVisual({
           fill="#FFFFFF"
           fontSize="18"
           fontWeight="bold"
-          fontFamily="'DM Sans', system-ui, sans-serif"
+          fontFamily="'Inter', system-ui, sans-serif"
         >
           {weightValue}
         </text>
@@ -98,7 +99,7 @@ export function ScaleVisual({
                 fontSize="12"
                 fontWeight="bold"
                 fontStyle="italic"
-                fontFamily="'DM Sans', system-ui, sans-serif"
+                fontFamily="'Inter', system-ui, sans-serif"
               >
                 {unknownSymbol}
               </text>

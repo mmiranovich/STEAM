@@ -24,17 +24,15 @@ export function EquationArea({ equation, blankValue, isCorrect }: EquationAreaPr
       ? 'border-green-500 bg-green-50'
       : isCorrect === false
         ? 'border-red-500 bg-red-50'
-        : blankValue !== null
-          ? 'border-gray-300 bg-white'
-          : 'border-gray-200 bg-gray-100'
+        : 'border-[#00a651] bg-white'
 
   const shakeClass = isCorrect === false ? 'animate-shake' : ''
 
   return (
     <div className="flex items-center justify-center gap-3 border-2 border-dashed border-gray-300 rounded-xl py-5 px-6 mx-auto w-fit">
-      <span ref={mathRef} className="text-[24px]" />
+      <span ref={mathRef} className="text-[32px] [&_.katex]:font-serif [&_.katex]:italic" />
       <div
-        className={`w-[50px] h-[50px] rounded-lg border-2 flex items-center justify-center text-[22px] font-bold transition-colors duration-200 ${blankBorderColor} ${shakeClass}`}
+        className={`w-[58px] h-[58px] rounded-[10px] border-[3px] flex items-center justify-center text-[28px] font-bold transition-colors duration-200 ${blankBorderColor} ${shakeClass}`}
       >
         {blankValue !== null && (
           <span

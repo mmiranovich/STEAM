@@ -69,16 +69,14 @@ function App() {
         highlightNumber={question.visual.unknownCount}
       />
 
-      <div className="mt-6">
-        <ScaleVisual
-          weightValue={question.visual.weightValue}
-          unknownSymbol={question.visual.unknownSymbol}
-          unknownCount={question.visual.unknownCount}
-          totalWeight={question.visual.totalWeight}
-        />
-      </div>
+      <ScaleVisual
+        weightValue={question.visual.weightValue}
+        unknownSymbol={question.visual.unknownSymbol}
+        unknownCount={question.visual.unknownCount}
+        totalWeight={question.visual.totalWeight}
+      />
 
-      <div className="mt-6">
+      <div className="my-8">
         <EquationArea
           equation={question.equation.display}
           blankValue={filledValue}
@@ -88,19 +86,17 @@ function App() {
 
       {/* Explanation area */}
       {showExplanation && question.explanation && (
-        <div className="mt-3 p-4 bg-gray-50 rounded-xl text-sm text-gray-600 leading-relaxed">
+        <div className="mb-4 p-4 bg-gray-50 rounded-xl text-sm text-gray-600 leading-relaxed">
           {question.explanation}
         </div>
       )}
 
-      <div className="mt-4">
-        <AnswerChoices
-          choices={question.choices}
-          selectedChoice={state.phase === 'answering' ? selectedAnswer : filledValue}
-          onSelect={selectAnswer}
-          disabled={!isInteractive}
-        />
-      </div>
+      <AnswerChoices
+        choices={question.choices}
+        selectedChoice={state.phase === 'answering' ? selectedAnswer : filledValue}
+        onSelect={selectAnswer}
+        disabled={!isInteractive}
+      />
 
       <div className="mt-auto pb-8">
         {isInteractive && (
