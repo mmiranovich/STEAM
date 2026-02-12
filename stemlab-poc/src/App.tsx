@@ -78,7 +78,7 @@ function App() {
         />
       </div>
 
-      <div className="mt-5">
+      <div className="mt-6">
         <EquationArea
           equation={question.equation.display}
           blankValue={filledValue}
@@ -93,7 +93,7 @@ function App() {
         </div>
       )}
 
-      <div className="mt-5">
+      <div className="mt-4">
         <AnswerChoices
           choices={question.choices}
           selectedChoice={state.phase === 'answering' ? selectedAnswer : filledValue}
@@ -102,7 +102,7 @@ function App() {
         />
       </div>
 
-      <div className="mt-auto pt-4">
+      <div className="mt-auto pt-5">
         {isInteractive && (
           <CheckButton
             disabled={selectedAnswer === null}
