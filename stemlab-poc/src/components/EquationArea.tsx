@@ -24,7 +24,7 @@ export function EquationArea({ equation, blankValue, isCorrect }: EquationAreaPr
       ? 'border-green-500 bg-green-50'
       : isCorrect === false
         ? 'border-red-500 bg-red-50'
-        : 'border-[#00a651] bg-white'
+        : 'border-[#E5E7EB] bg-[#F3F4F6]'
 
   const shakeClass = isCorrect === false ? 'animate-shake' : ''
 
