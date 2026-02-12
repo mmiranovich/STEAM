@@ -7,7 +7,7 @@ interface AnswerChoicesProps {
 
 export function AnswerChoices({ choices, selectedChoice, onSelect, disabled }: AnswerChoicesProps) {
   return (
-    <div className="flex gap-4 justify-center max-w-[380px] mx-auto w-full">
+    <div className="mx-auto flex w-full max-w-[380px] justify-center gap-4">
       {choices.map((choice) => {
         const isSelected = selectedChoice === choice
         return (
@@ -15,15 +15,15 @@ export function AnswerChoices({ choices, selectedChoice, onSelect, disabled }: A
             key={choice}
             onClick={() => !disabled && onSelect(choice)}
             disabled={disabled}
-            className={`flex-1 max-w-[80px] h-[68px] rounded-[14px] text-[20px] font-bold transition-all duration-150 ${
-              isSelected
-                ? 'bg-gray-100 text-gray-300 border-2 border-gray-200 shadow-none scale-95'
-                : disabled
-                  ? 'bg-white text-[#111827] border-2 border-[#E5E7EB] shadow-[0_2px_0_#e5e7eb] cursor-not-allowed opacity-60'
-                  : 'bg-white text-[#111827] border-2 border-[#E5E7EB] shadow-[0_2px_0_#e5e7eb] hover:shadow-md hover:-translate-y-0.5 active:translate-y-[2px] active:shadow-none cursor-pointer'
+            className={`h-[64px] w-[64px] rounded-[12px] border-2 text-[22px] font-semibold transition-all duration-150 ${
+              disabled
+                ? 'cursor-not-allowed bg-white text-[#111827]/50 border-[#E5E7EB] opacity-60'
+                : isSelected
+                  ? 'bg-[#F9FAFB] text-[#111827] border-[#C9CCD3] shadow-[0_1px_0_rgba(0,0,0,0.04)] translate-y-[1px]'
+                  : 'bg-white text-[#111827] border-[#E5E7EB] shadow-[0_1px_0_rgba(0,0,0,0.04)] hover:shadow-[0_2px_0_rgba(0,0,0,0.06)] hover:-translate-y-[1px] active:translate-y-[1px] active:shadow-[0_1px_0_rgba(0,0,0,0.04)] cursor-pointer'
             }`}
           >
-            {isSelected ? '' : choice}
+            {choice}
           </button>
         )
       })}

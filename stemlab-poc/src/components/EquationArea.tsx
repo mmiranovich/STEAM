@@ -29,19 +29,21 @@ export function EquationArea({ equation, blankValue, isCorrect }: EquationAreaPr
   const shakeClass = isCorrect === false ? 'animate-shake' : ''
 
   return (
-    <div className="flex items-center justify-center gap-3 border-2 border-dashed border-gray-300 rounded-xl py-5 px-6 mx-auto w-fit">
-      <span ref={mathRef} className="text-[32px] [&_.katex]:font-serif [&_.katex]:italic" />
-      <div
-        className={`w-[58px] h-[58px] rounded-[10px] border-[3px] flex items-center justify-center text-[28px] font-bold transition-colors duration-200 ${blankBorderColor} ${shakeClass}`}
-      >
-        {blankValue !== null && (
-          <span
-            key={`${blankValue}-${isCorrect}`}
-            className={isCorrect === null ? 'animate-pop-in' : ''}
-          >
-            {blankValue}
-          </span>
-        )}
+    <div className="mx-auto w-fit">
+      <div className="flex items-center justify-center gap-3 rounded-xl border-2 border-dashed border-[#E5E7EB] bg-white px-6 py-4">
+        <span ref={mathRef} className="text-[32px] [&_.katex]:font-serif [&_.katex]:italic" />
+        <div
+          className={`h-[58px] w-[58px] rounded-[12px] border-2 flex items-center justify-center text-[28px] font-semibold transition-colors duration-200 ${blankBorderColor} ${shakeClass}`}
+        >
+          {blankValue !== null && (
+            <span
+              key={`${blankValue}-${isCorrect}`}
+              className={isCorrect === null ? 'animate-pop-in' : ''}
+            >
+              {blankValue}
+            </span>
+          )}
+        </div>
       </div>
     </div>
   )
