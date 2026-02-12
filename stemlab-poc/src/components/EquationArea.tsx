@@ -31,8 +31,8 @@ export function EquationArea({ equation, blankValue, isCorrect }: EquationAreaPr
   const shakeClass = isCorrect === false ? 'animate-shake' : ''
 
   return (
-    <div className="flex items-center justify-center gap-2 border-2 border-dashed border-gray-300 rounded-2xl py-5 px-4 overflow-x-auto">
-      <span ref={mathRef} className="text-[24px] flex-shrink-0" />
+    <div className="flex items-center justify-center gap-2 border-2 border-dashed border-gray-300 rounded-2xl py-5 px-6">
+      <span ref={mathRef} className="text-[24px]" />
       <div
         className={`w-12 h-12 rounded-lg border-2 flex items-center justify-center text-[22px] font-bold transition-colors duration-200 ${blankBorderColor} ${shakeClass}`}
       >

@@ -7,7 +7,7 @@ interface AnswerChoicesProps {
 
 export function AnswerChoices({ choices, selectedChoice, onSelect, disabled }: AnswerChoicesProps) {
   return (
-    <div className="flex gap-3">
+    <div className="flex gap-3 justify-center">
       {choices.map((choice) => {
         const isSelected = selectedChoice === choice
         return (
@@ -15,7 +15,7 @@ export function AnswerChoices({ choices, selectedChoice, onSelect, disabled }: A
             key={choice}
             onClick={() => !disabled && onSelect(choice)}
             disabled={disabled}
-            className={`flex-1 h-14 rounded-xl text-[20px] font-bold transition-all duration-150 ${
+            className={`w-16 h-14 rounded-xl text-[20px] font-bold transition-all duration-150 ${
               isSelected
                 ? 'bg-gray-100 text-gray-300 border-2 border-gray-200 scale-95'
                 : disabled

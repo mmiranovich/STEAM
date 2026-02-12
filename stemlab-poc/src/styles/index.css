@@ -21,12 +21,9 @@
   box-sizing: border-box;
 }
 
-/* Safe area padding for notched iPhones */
-.safe-area-pad {
+/* Safe area insets for notched iPhones — additive, not overriding */
+.safe-area-top {
   padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
-  padding-left: max(1.5rem, env(safe-area-inset-left));
-  padding-right: max(1.5rem, env(safe-area-inset-right));
 }
 
 .safe-area-bottom {

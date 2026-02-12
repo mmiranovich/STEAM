@@ -13,7 +13,7 @@ export function ScaleVisual({
 }: ScaleVisualProps) {
   return (
     <div className="flex justify-center">
-      <svg viewBox="0 0 320 240" className="w-full" aria-label="Digital scale illustration">
+      <svg viewBox="0 0 320 240" className="w-full max-w-[320px]" aria-label="Digital scale illustration">
         <defs>
           <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
             <feDropShadow dx="0" dy="2" stdDeviation="3" floodOpacity="0.1" />
