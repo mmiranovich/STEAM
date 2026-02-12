@@ -1,0 +1,95 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@theme {
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --color-weight-grey: #9CA3AF;
+  --color-triangle-gold: #F59E0B;
+  --color-triangle-gold-dark: #D97706;
+  --color-scale-body: #374151;
+  --color-scale-display-bg: #F3F4F6;
+  --color-correct-bg: #ECFDF5;
+  --color-correct-text: #059669;
+  --color-correct-button: #10B981;
+  --color-incorrect-bg: #FEF2F2;
+  --color-incorrect-text: #DC2626;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: #F3F4F6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Answer chip → blank animation */
+@keyframes pop-in {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Incorrect shake */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  15% { transform: translateX(-8px); }
+  30% { transform: translateX(8px); }
+  45% { transform: translateX(-4px); }
+  60% { transform: translateX(4px); }
+  75% { transform: translateX(-2px); }
+  90% { transform: translateX(2px); }
+}
+
+/* Toast slide up */
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* XP badge pop */
+@keyframes xp-pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-pop-in {
+  animation: pop-in 200ms ease-out forwards;
+}
+
+.animate-shake {
+  animation: shake 400ms ease forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-xp-pop {
+  animation: xp-pop 300ms ease-out 100ms forwards;
+  opacity: 0;
+}
