@@ -21,7 +21,7 @@ export function FeedbackToast({
     <div className="fixed inset-x-0 bottom-0 z-50 animate-slide-up">
       <div
         className={`rounded-t-[20px] px-6 pt-5 pb-8 safe-area-bottom ${
-          isCorrect ? 'bg-correct-bg' : 'bg-incorrect-bg'
+          isCorrect ? 'bg-correct-bg border-t border-[#d1fae5]' : 'bg-incorrect-bg border-t border-red-200'
         }`}
       >
         <div className="max-w-[430px] mx-auto">
@@ -52,7 +52,7 @@ export function FeedbackToast({
           <div className="flex gap-3">
             <button
               onClick={onWhy}
-              className={`flex-shrink-0 px-6 h-12 rounded-full font-semibold text-[15px] transition-colors cursor-pointer ${
+              className={`flex-shrink-0 px-6 h-[52px] rounded-full font-bold text-[18px] transition-colors cursor-pointer ${
                 isCorrect
                   ? 'bg-white text-correct-text hover:bg-green-100'
                   : 'bg-white text-incorrect-text hover:bg-red-100'
@@ -62,9 +62,9 @@ export function FeedbackToast({
             </button>
             <button
               onClick={onContinue}
-              className={`flex-1 h-12 rounded-full font-semibold text-[15px] text-white transition-colors cursor-pointer ${
+              className={`flex-1 h-[52px] rounded-[26px] font-bold text-[18px] text-white transition-colors cursor-pointer ${
                 isCorrect
-                  ? 'bg-correct-button hover:bg-green-600'
+                  ? 'bg-correct-button hover:bg-green-700'
                   : 'bg-red-500 hover:bg-red-600'
               }`}
             >

@@ -2,15 +2,15 @@
 @import "katex/dist/katex.min.css";
 
 @theme {
-  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
   --color-weight-grey: #9CA3AF;
   --color-triangle-gold: #F59E0B;
   --color-triangle-gold-dark: #D97706;
-  --color-scale-body: #374151;
+  --color-scale-body: #343a4b;
   --color-scale-display-bg: #F3F4F6;
-  --color-correct-bg: #ECFDF5;
+  --color-correct-bg: #f0fff4;
   --color-correct-text: #059669;
-  --color-correct-button: #10B981;
+  --color-correct-button: #059669;
   --color-incorrect-bg: #FEF2F2;
   --color-incorrect-text: #DC2626;
 }
