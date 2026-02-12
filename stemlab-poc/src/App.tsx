@@ -88,12 +88,12 @@ function App() {
 
       {/* Explanation area */}
       {showExplanation && question.explanation && (
-        <div className="mt-4 p-4 bg-gray-50 rounded-xl text-sm text-gray-600 leading-relaxed">
+        <div className="mt-3 p-4 bg-gray-50 rounded-xl text-sm text-gray-600 leading-relaxed">
           {question.explanation}
         </div>
       )}
 
-      <div className="mt-6">
+      <div className="mt-4">
         <AnswerChoices
           choices={question.choices}
           selectedChoice={state.phase === 'answering' ? selectedAnswer : filledValue}
@@ -102,7 +102,7 @@ function App() {
         />
       </div>
 
-      <div className="mt-auto pt-6">
+      <div className="mt-auto pt-5">
         {isInteractive && (
           <CheckButton
             disabled={selectedAnswer === null}
